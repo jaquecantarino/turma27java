@@ -4,10 +4,10 @@
 //que você faça um sistema que leia a variável P (peso de tomates) e verifique se há excesso. 
 //Se houver, gravar na variável E (Excesso) e na variável M o valor da multa que João deverá pagar. 
 //Caso contrário mostrar tais variáveis com o conteúdo ZERO.
-programa{
+programa{
 	
-	funcao inicio(){
-		real p_tomates, excesso, multa
+	funcao inicio(){
+		real p_tomates, excesso=0, multa=0
 
 		escreva("Olá João, quantos quilos de tomate você trouxe hoje? ")
 		leia(p_tomates)
@@ -15,13 +15,15 @@ programa{
 		
 		se(p_tomates<=50){
 			escreva("Não há multa a ser paga, peso ",p_tomates," está dentro do limite de 50.0Kgs!")
+			escreva("\nExcesso: ",excesso)
+			escreva("\nMulta: ",multa)
 		} senao {
 			excesso = p_tomates - 50
 			multa = excesso*4
-			escreva("Você excedeu ",excesso," quilos. A multa a ser paga é de ",multa," reais. \n")
+			escreva("Você excedeu ",excesso," quilos. \nA multa a ser paga é de ",multa," reais. \n")
 		}
 
-		escreva("Fim do programa!")
+		escreva("\nFim do programa!")
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -29,7 +31,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 683; 
+ * @POSICAO-CURSOR = 1065; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
