@@ -4,7 +4,7 @@
 programa{
 	inclua biblioteca Matematica
 	
-	funcao inicio(){
+	funcao inicio(){
 		inteiro base, altura, area
 
 		escreva("Qual valor da base do triangulo?")
@@ -12,7 +12,7 @@ programa{
 		escreva("Qual valor da altura do triangulo?")
 		leia(altura)
 
-		se(base>0 e altura>0){
+		se(base>0 e altura>0 e altura>=base){
 			area = (base*altura)/2
 			escreva("A area do triangulo é: ",area)
 		} senao {
@@ -27,7 +27,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 638; 
+ * @POSICAO-CURSOR = 470; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
