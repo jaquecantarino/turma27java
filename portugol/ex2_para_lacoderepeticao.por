@@ -3,8 +3,7 @@
 
 programa{
 	
-	funcao inicio(){
-		const inteiro max=500
+	funcao inicio(){
 		inteiro impar3=0, contagem=0
 
 		para(contagem=1;contagem<=500;contagem++){
@@ -22,7 +21,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4; 
+ * @POSICAO-CURSOR = 189; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

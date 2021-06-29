@@ -3,17 +3,17 @@
 //valores enquanto o usuário estiver fornecendo valores positivos. Ou seja, o programa deve parar 
 //quando o usuário fornecer um valor negativo.
 
-programa{
-	inclua biblioteca Matematica-->mat
+programa{
+	inclua biblioteca Matematica-->mat
 
-	funcao inicio(){
+	funcao inicio(){
 		inteiro num=0, soma=0, contador=0
-		real media=0.0, total=0.0
+		real media=0.0
 
 		escreva("Digite um número positivo para continuar\nOu um número negativo para encerrar.\n:")
 		leia(num)
 
-		enquanto(num>0){
+		enquanto(num>=0){
 			soma += num
 			contador++
 						
@@ -37,7 +37,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 588; 
+ * @POSICAO-CURSOR = 628; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
