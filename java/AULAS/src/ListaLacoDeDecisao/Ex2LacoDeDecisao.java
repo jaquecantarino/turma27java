@@ -16,8 +16,9 @@ public class Ex2LacoDeDecisao {
 		num2 = leia.nextInt();
 		System.out.println("Escolha o terceiro número: ");
 		num3 = leia.nextInt();
-		
-		if(num1>num2 && num1>num3 && num2>num3) {
+		if(num1==num2 && num2==num3) {
+			System.out.printf("O número %d foi repetido 3 vezes.",num1);
+		}else if(num1>num2 && num1>num3 && num2>num3) {
 			System.out.printf("A ordem crescente dos números é: %d, %d, %d",num1,num2,num3);
 		} else if(num1>num2 && num1>num3 && num3>num2) {
 			System.out.printf("A ordem crescente dos números é: %d, %d, %d",num1,num3,num2);
