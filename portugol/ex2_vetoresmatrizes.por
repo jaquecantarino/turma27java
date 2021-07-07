@@ -2,9 +2,11 @@
 //vetor com os lançamentos, escreva esse vetor. A seguir determine e imprima a média aritmética 
 //dos lançamentos, contabilize e apresente também quantas foram as ocorrências da maior pontuação.
 
-programa{
+programa{
+
+inclua biblioteca Util
 	
-	funcao inicio(){
+	funcao inicio(){
 		inteiro lancamento[10]
 		inteiro media=0, maior=0, soma=0
 
@@ -35,7 +37,7 @@ programa{
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 708; 
+ * @POSICAO-CURSOR = 406; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
