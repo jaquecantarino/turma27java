@@ -2,11 +2,13 @@ package POO;
 
 public class Aviao {
 	
-	boolean ligado;
-	boolean turbinas;
-	boolean tremDePouso;
-	boolean portas;
-	String destino, modelo, responsavel;
+	public boolean ligado;
+	public boolean turbinas;
+	public boolean tremDePouso;
+	public boolean portas;
+	public String destino;
+	public String modelo;
+	public String responsavel;
 	
 	
 	public void Voo (){
