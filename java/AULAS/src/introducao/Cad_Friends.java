@@ -1,8 +1,6 @@
-package Programas_POO;
+package introducao;
 
 import java.util.Scanner;
-
-import Objetos.Pessoas;
 
 public class Cad_Friends {
 
