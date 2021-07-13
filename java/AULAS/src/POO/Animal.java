@@ -27,7 +27,7 @@ public class Animal {
 	}
 	
 	public void emitirSom() {
-		System.out.println("Emitindo som");
+		System.out.println(nome+"");
 	}
 	
 }

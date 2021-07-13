@@ -10,4 +10,8 @@ public class Cachorro extends Animal{
 		System.out.println("correndo!");
 	}
 	
+	@Override
+	public void emitirSom() {
+		System.out.println(super.getNome() + "Au Au Au!");
+	}
 }

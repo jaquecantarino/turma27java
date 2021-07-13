@@ -36,5 +36,9 @@ public class Eletronico {
 	public void setUtilidade(String utilidade) {
 		this.utilidade = utilidade;
 	}
+	
+	public void ligar() {
+		
+	}
 
 }
