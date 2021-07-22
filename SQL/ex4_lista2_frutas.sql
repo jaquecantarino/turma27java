@@ -35,4 +35,13 @@ insert into tb_produto(nome,valor,epoca,poupa,delivery,categoria_id) values ("Pe
 insert into tb_produto(nome,valor,epoca,poupa,delivery,categoria_id) values ("Morango",7.99,"Julho",true,true,5);
 insert into tb_produto(nome,valor,epoca,poupa,delivery,categoria_id) values ("Uva",5.99,"Outubro",true,true,3);*/
 
+-- select * from tb_produto where valor > 50.00
+
+-- select * from tb_produto where valor >3.00 and valor<60.00
+
+-- select * from tb_produto where nome like "%c%"
+
+-- select * from tb_produto inner join tb_categoria on tb_categoria.id=tb_produto.categoria_id
+
+-- select * from tb_produto inner join tb_categoria on tb_categoria.id=tb_produto.categoria_id where tb_categoria.id=3
 
