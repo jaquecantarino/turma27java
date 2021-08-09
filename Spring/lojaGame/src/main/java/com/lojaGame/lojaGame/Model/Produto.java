@@ -14,23 +14,27 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 @Entity
 @Table(name = "tb_produto")
 public class Produto {
-	
+
 	@Id
-	@GeneratedValue (strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
+
 	@NotBlank
-	@Size (min=1, max=100)
+	@Size(min = 1, max = 100)
 	private String nome;
-	
+
 	@Min(1)
 	private double preco;
-	
+
 	private boolean disponivel;
-	
+
 	@ManyToOne
 	@JsonIgnoreProperties("produtos")
 	private Categoria categoria;
+
+	@ManyToOne
+	@JsonIgnoreProperties("produtos")
+	private Usuario usuario;
 
 	public long getId() {
 		return id;
@@ -70,6 +74,14 @@ public class Produto {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	public Usuario getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(Usuario usuario) {
+		this.usuario = usuario;
 	}
 
 }
