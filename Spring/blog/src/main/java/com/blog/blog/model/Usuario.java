@@ -11,6 +11,7 @@ import javax.persistence.Id;
 //import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -25,16 +26,17 @@ public class Usuario {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	
-	@NotBlank
-	@Size(min=2, max=35)
+	@NotBlank(message = "O atributo nome é obrigatório")
+	@Size(min=2, max=35, message = "O atributo nome deve ter no mínimo 05 e no máximo 100 caracteres")
 	private String nome;
 	
-	@NotBlank
+	@NotBlank(message = "O atributo usuário é obrigatório")
 	@Size(min=5, max=75)
+	@Email(message = "O atributo usuário deve ser um email")
 	private String usuario;
 	
-	@NotBlank
-	@Size(min=2,max=1000)
+	@NotBlank(message = "O atributo senha é obrigatório")
+	@Size(min=2,max=1000,message = "O atributo senha deve ter no mínimo 8 caracteres")
 	private String senha;
 	
 	@Column(name = "dt_nascimento")
@@ -44,6 +46,18 @@ public class Usuario {
 	@OneToMany (mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties("usuario")
 	private List <Postagem> postagem;
+	
+	// Primeiro método Construtor - Com os atributos
+	public Usuario(long id, String nome, String usuario, String senha,
+	LocalDate dataNascimento) {
+	this.id = id;
+	this.nome = nome;
+	this.usuario = usuario;
+	this.senha = senha;
+	this.dataNascimento = dataNascimento;
+	}
+	// Segundo método Construtor - Sem os atributos
+	public Usuario() { }
 
 	public long getId() {
 		return id;
