@@ -1,68 +1,63 @@
 package com.blog.blog.security;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
+
 import com.blog.blog.model.Usuario;
 
-public class UserDetailsImpl implements UserDetails {
 
-	private static final long serialVersionUID = 1L; // anotação interna
+
+public class UserDetailsImpl implements UserDetails{
+	
+	private static final long serialVersionUID = 1L;
 
 	private String userName;
 	private String password;
+	private List<GrantedAuthority> authorities;
 
-	// construtor de classe:
-	public UserDetailsImpl(Usuario user) {
-		this.userName = user.getUsuario();
-		this.password = user.getSenha();
+	public UserDetailsImpl(Usuario usuario) {
+		this.userName = usuario.getUsuario();
+		this.password = usuario.getSenha();		
 	}
 
-	// construtor vazio
-	public UserDetailsImpl() {
-	}
+	public UserDetailsImpl() {}
 
 	@Override
 	public Collection<? extends GrantedAuthority> getAuthorities() {
-		// TODO Auto-generated method stub
-		return null;
+		return authorities;
 	}
 
 	@Override
 	public String getPassword() {
-		// TODO Auto-generated method stub
-		return password; // trocamos aqui para retornar a senha
+		return password;
 	}
 
 	@Override
 	public String getUsername() {
-		// TODO Auto-generated method stub
-		return userName; // trocamos aqui para retornar o username
+
+		return userName;
 	}
 
 	@Override
 	public boolean isAccountNonExpired() {
-		// TODO Auto-generated method stub
-		return true; // virou true por boas praticas
+		return true;
 	}
 
 	@Override
 	public boolean isAccountNonLocked() {
-		// TODO Auto-generated method stub
-		return true; // virou true por boas praticas
+		return true;
 	}
 
 	@Override
 	public boolean isCredentialsNonExpired() {
-		// TODO Auto-generated method stub
-		return true; // virou true por boas praticas
+		return true;
 	}
 
 	@Override
 	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return true; // virou true por boas praticas
+		return true;
 	}
-
-}
+} 

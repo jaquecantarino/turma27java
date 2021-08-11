@@ -35,11 +35,11 @@ public class UsuarioService {
 			if (encoder.matches(user.get().getSenha(), usuario.get().getSenha()))
 				;
 			{
-				// regra de negocio apra devolver a senha incriptada
+				// regra de negocio apra devolver a senha encriptada
 
 				String auth = user.get().getUsuario() + ":" + user.get().getSenha();
 				byte[] encodeAuth = Base64.encodeBase64(auth.getBytes(Charset.forName("US-ASCII")));
-				String authHeader = "Basic" + new String(encodeAuth);
+				String authHeader = "Basic " + new String(encodeAuth);
 
 				user.get().setToken(authHeader);
 				user.get().setNome(usuario.get().getNome());
